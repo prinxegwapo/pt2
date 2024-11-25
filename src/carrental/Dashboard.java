@@ -32,7 +32,6 @@ public class Dashboard extends javax.swing.JFrame {
         careg = new javax.swing.JButton();
         Return = new javax.swing.JButton();
         Customer = new javax.swing.JButton();
-        Rental = new javax.swing.JButton();
         Logout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,7 +56,7 @@ public class Dashboard extends javax.swing.JFrame {
         Return.setBackground(new java.awt.Color(204, 204, 255));
         Return.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         Return.setForeground(new java.awt.Color(0, 0, 0));
-        Return.setText("Return");
+        Return.setText("Status");
         Return.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ReturnActionPerformed(evt);
@@ -71,16 +70,6 @@ public class Dashboard extends javax.swing.JFrame {
         Customer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CustomerActionPerformed(evt);
-            }
-        });
-
-        Rental.setBackground(new java.awt.Color(204, 204, 255));
-        Rental.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
-        Rental.setForeground(new java.awt.Color(0, 0, 0));
-        Rental.setText("Rental");
-        Rental.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RentalActionPerformed(evt);
             }
         });
 
@@ -113,7 +102,6 @@ public class Dashboard extends javax.swing.JFrame {
                             .addComponent(Return, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(careg, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Customer, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Rental, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Logout, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -133,11 +121,9 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(Return, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Customer, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Rental, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Logout, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(Logout, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -167,12 +153,6 @@ public class Dashboard extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_CustomerActionPerformed
 
-    private void RentalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RentalActionPerformed
-          Rental Rent = new Rental();
-        Rent.show();
-        dispose();
-    }//GEN-LAST:event_RentalActionPerformed
-
     private void caregActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caregActionPerformed
         CarReg Regis = new CarReg();
         Regis.show();
@@ -180,7 +160,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_caregActionPerformed
 
     private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
-          Return Ret = new Return();
+          Status Ret = new Status();
         Ret.show();
         dispose();
     }//GEN-LAST:event_ReturnActionPerformed
@@ -229,7 +209,6 @@ public class Dashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Customer;
     private javax.swing.JButton Logout;
-    private javax.swing.JButton Rental;
     private javax.swing.JButton Return;
     private javax.swing.JButton careg;
     private javax.swing.JLabel jLabel1;
